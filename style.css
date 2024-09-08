@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: limegreen;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.hacked-text {
+    font-size: 5rem;
+    text-shadow: 0 0 20px limegreen;
+    margin-bottom: 20px;
+    animation: glitch 1s infinite;
+}
+
+.matrix {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    font-size: 20px;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0 limegreen, -2px -2px 0 #00FF00;
+    }
+    20% {
+        text-shadow: -2px -2px 0 #00FF00, 2px 2px 0 limegreen;
+    }
+    40% {
+        text-shadow: 2px -2px 0 #00FF00, -2px 2px 0 limegreen;
+    }
+    60% {
+        text-shadow: -2px 2px 0 limegreen, 2px -2px 0 #00FF00;
+    }
+    80% {
+        text-shadow: 0 0 10px limegreen, 0 0 10px #00FF00;
+    }
+    100% {
+        text-shadow: 2px 2px 0 #00FF00, -2px -2px 0 limegreen;
+    }
+}
